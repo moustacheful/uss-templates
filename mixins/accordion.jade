@@ -1,0 +1,9 @@
+mixin accordion-wrapper()
+	div.faq
+		block
+
+mixin accordion-item(title)
+	div.faq-item
+		h3.faq-question!=title
+		div.faq-answer
+			block

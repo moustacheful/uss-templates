@@ -3,5 +3,6 @@ app.get '/', (request,response) ->
 	response.send html
 
 app.post '/compile', (request,response) ->
-	response.send jade.render request.body.jade
+	response.send jade.render request.body.jade,
+		pretty: true
 

@@ -1,6 +1,9 @@
 var app = {
 	initialize: function(){
 		app.forms();
+	    app.editor = ace.edit("editor");
+    	editor.setTheme("ace/theme/monokai");
+    	editor.getSession().setMode("ace/mode/jade");
 	},
 	forms: function(){
 		$('form').submit(function(evt){

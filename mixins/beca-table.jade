@@ -1,0 +1,11 @@
+mixin content-table(title,color)
+	div.content-table-career
+		h4!=title
+		div.line(style='background-color:'+color)
+		div.table-container
+			table.center
+				block
+
+mixin table-row()
+	tr
+		block

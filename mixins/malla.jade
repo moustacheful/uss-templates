@@ -1,0 +1,39 @@
+
+mixin legend-header()
+	div.career-labels
+		block
+		
+mixin legend-element(content,color)
+	div.career-label
+		div.career-label-color(style='background-color:'+color)
+		div.career-label-text=content
+
+mixin year(title)
+	div.career-year
+		div.career-year-text
+			span!=title
+		div.career-semesters
+			block
+
+mixin semester(title)
+		div.career-semester
+			div.career-semester-text!=title
+			div.career-themes
+				.isotope
+					block
+
+mixin class(name,color,width)
+	div.career-courses(class=( width ? 'career-courses-' + width:undefined ))
+		div.career-course(style='background-color:'+color)
+			div.career-course-text=name
+			div.career-course-detail
+				span.detail-triangle
+				span.detail-close
+					span.fa.fa-times
+				div.detail-title=name
+				div.detail-content
+					block
+
+mixin grade(title)
+	div.career-grade
+		div.inner=title
