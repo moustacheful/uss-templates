@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+	head
+		link(rel='stylesheet',href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css')
+		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+		script(src='bower/ace-builds/src-min/ace.js')
+		script(src='bower/ace-builds/src-min/mode-jade.js')
+		script(src='bower/ace-builds/src-min/ext-textarea.js')
+		script(src='js/app.js')
+		title USS
+	body
+		h1 USS PLS
+		p=test
+		form(action='/compile',method='POST')
+			textarea(name="jade", cols="30", rows="10")
+			input(type="submit", value="Enviar")
+		
+		h1 Resultado
+		textarea.result(name="", cols="30", rows="10")
