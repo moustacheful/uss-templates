@@ -1,0 +1,19 @@
+{
+  "name": "uss-templates",
+  "version": "0.0.0",
+  "authors": [
+    "Daniel Acuña <suchious@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ace-builds": "~1.1.8"
+  }
+}

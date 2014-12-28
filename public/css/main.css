@@ -1,4 +1,13 @@
 #editor { 
-	width: 500px;
+	width: 100%;
 	height: 500px;
+	border: 1px solid #EEE;
+}
+
+textarea {
+	width: 100%;
+	border: 1px solid #EEE;
+}
+body{
+	background: white !important;
 }

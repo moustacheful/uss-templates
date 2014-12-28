@@ -1,7 +1,6 @@
 express = require 'express'
 bodyParser = require 'body-parser'
 jade = require 'jade'
-multiparty = require 'multiparty'
 util = require 'util'
 
 app = express()
