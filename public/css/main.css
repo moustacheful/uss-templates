@@ -11,3 +11,9 @@ textarea {
 body{
 	background: white !important;
 }
+h3.title{
+	padding-top: 30px;
+}
+body {
+	padding-bottom: 50px;
+}

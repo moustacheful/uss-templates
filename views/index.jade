@@ -16,7 +16,9 @@ html(lang="en")
 	
 	body
 		div.limit
-			h3 USS templates
+			h3.title 
+				b USS 
+				span TEMPLATES
 			.right
 				label(for="type")
 					b Tipo
@@ -27,9 +29,6 @@ html(lang="en")
 
 				.button.load-example(data-tooltip="Cargar ejemplo")
 					i.fa.fa-clipboard
-				
-				.button
-					i.fa.fa-question-circle
 
 			form(action='/compile',method='POST')
 				div#editor

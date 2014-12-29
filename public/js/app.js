@@ -6,8 +6,6 @@ var helperApp = {
     	helperApp.editor.getSession().setMode("ace/mode/jade")
     	helperApp.editor.getSession().setUseWrapMode(true);
     	helperApp.editor.getSession().setUseSoftTabs(false);
-	},
-	forms: function(){
 		$('.load-example').click(function(){
 			var option = $('#type').find('option:selected');
 			$.ajax({
@@ -15,7 +13,13 @@ var helperApp = {
 			}).success(function(data){
 				helperApp.editor.setValue(data)
 			})
-		})
+		});
+
+		$('textarea.result').click(function(evt){
+			$(this).select();
+		});
+	},
+	forms: function(){
 		$('form').submit(function(evt){
 			evt.preventDefault();
 			var el = $(this);
@@ -34,7 +38,7 @@ var helperApp = {
 				$('.result-preview').removeClass()
 									.addClass('result-preview '+htmlClass)
 									.empty()
-									.append(data);
+									.append(data.trim());
 				app.init()
 			})
 		})
