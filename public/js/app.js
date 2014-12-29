@@ -1,8 +1,10 @@
 var helperApp = {
 	initialize: function(){
 		helperApp.forms();
-	    helperApp.editor = ace.edit("editor");
+	    helperApp.editor = ace.edit("editor",'ace/mode/jade');
     	helperApp.editor.setTheme("ace/theme/tomorrow")
+    	helperApp.editor.setShowInvisibles(true);
+    	helperApp.editor.setDisplayIndentGuides(true);
     	helperApp.editor.getSession().setMode("ace/mode/jade")
     	helperApp.editor.getSession().setUseWrapMode(true);
     	helperApp.editor.getSession().setUseSoftTabs(false);
@@ -40,6 +42,11 @@ var helperApp = {
 									.empty()
 									.append(data.trim());
 				app.init()
+			}).error(function(xhr){
+				app.alert.open({
+					title: 'Ocurrió un error',
+					content: xhr.responseText
+				})
 			})
 		})
 	}
