@@ -8,6 +8,14 @@ var helperApp = {
     	helperApp.editor.getSession().setUseSoftTabs(false);
 	},
 	forms: function(){
+		$('.load-example').click(function(){
+			var option = $('#type').find('option:selected');
+			$.ajax({
+				url: 'examples/' + option.data('example')
+			}).success(function(data){
+				helperApp.editor.setValue(data)
+			})
+		})
 		$('form').submit(function(evt){
 			evt.preventDefault();
 			var el = $(this);

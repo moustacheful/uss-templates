@@ -18,20 +18,25 @@ html(lang="en")
 		div.limit
 			h3 USS templates
 			.right
-
-				label(for="type") Tipo
+				label(for="type")
+					b Tipo
 				select#type(name="type")
-					option(value="career-program") Mallas
-					option(value="content") Acordión
-					option(value="content") Tabla beca
+					option(value="career-program", data-example="malla.html") Mallas
+					option(value="content", data-example="accordion.html") Acordión
+					option(value="content", data-example="beca-table.html") Tabla beca
 
+				.button.load-example(data-tooltip="Cargar ejemplo")
+					i.fa.fa-clipboard
+				
 				.button
 					i.fa.fa-question-circle
 
 			form(action='/compile',method='POST')
 				div#editor
 				div.sep
-				input.button.button-primary(type="submit", value="Enviar")
+				button.button.button-primary(type="submit")
+					span Convertir 
+					i.fa.fa-cog
 			div.sep
 			div.result-preview
 			textarea.result(name="", cols="30", rows="10")

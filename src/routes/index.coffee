@@ -15,4 +15,3 @@ app.post '/compile', (request,response) ->
 	response.send jade.render jadeString,
 		pretty: true
 		basedir: './'
-

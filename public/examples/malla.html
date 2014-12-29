@@ -1,0 +1,33 @@
+//- Variables de colores
+
+- var naranjo = '#E64C33'
+- var azul = '#2965C7'
+
+//- Leyenda
+
++legend-header()
+	+legend-element('Título de leyenda', naranjo)
+	+legend-element('Título de leyenda', azul)
+
+
+//- Años
++year('1<sup>er</sup> año')
+
+	//- Semestre
+	+semester('I Semestre')
+
+		//- Ramos
+		+class('Ramo de ejemplo I', azul) Texto descriptivo
+		+class('Ramo de ejemplo II', naranjo) Texto descriptivo de ramo II
+
+	+semester('II Semestre')
+		+class('Ramo de ejemplo III', naranjo, 100) Ramo que ocupa el 100% del ancho
+
+//- Grado
++grade('Licenciado en ciencias de la administración')
+
+//- Separación
+br
+
+//- Texto explicativo
+p *texto <b>Puede contener HTML</b>
